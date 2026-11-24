@@ -1,146 +1,141 @@
-# Twitter Sentiment Analysis Tool
+# Sentiment Analysis
 
-A production-ready Natural Language Processing (NLP) system designed specifically for **Twitter Data Sentiment Analysis**, classifying tweets into **Positive**, **Negative**, or **Neutral** sentiment categories.
+<p align="center">
+  <strong>A Python-Based NLP Project for Analyzing Textual Sentiment</strong>
+</p>
 
-Built using **NLTK**, **SpaCy**, and **Scikit-Learn**, this tool offers:
-- Specialized Twitter preprocessing (handles mentions, hashtags, emojis, URLs, and slang contractions)
-- Rule-based lexicon classification with **NLTK VADER**
-- Machine learning classification with **TF-IDF + Logistic Regression** (trained on 15,000+ Twitter samples with 82.8% accuracy)
-- **Ensemble Hybrid Engine** combining VADER and ML predictions
-- **Interactive Streamlit Web Dashboard** with real-time analytics and CSV batch export
-- **Command-Line Interface (CLI)** supporting single-tweet, batch, and interactive terminal modes
-- Full **Automated Test Suite** (pytest)
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.x-blue?logo=python" alt="Python"/>
+  <img src="https://img.shields.io/badge/Domain-NLP-purple" alt="NLP"/>
+  <img src="https://img.shields.io/badge/Project-Machine%20Learning-orange" alt="Machine Learning"/>
+</p>
 
----
+## Overview
 
-## Architecture Overview
+Sentiment Analysis is a Natural Language Processing (NLP) project designed to analyze textual data and identify the sentiment expressed in tweets or other text inputs.
 
-```
-                      Raw Tweet Input
-                            │
-               ┌────────────┴────────────┐
-               ▼                         ▼
-      clean_for_vader()            clean_for_ml()
-   (Preserves caps, emojis,    (Contractions, Lemmatization,
-     punctuation, hashtags)        Stopwords, SpaCy POS)
-               │                         │
-               ▼                         ▼
-          NLTK VADER                ML Pipeline
-       Lexicon Analysis        (TF-IDF + Logistic Reg)
-               │                         │
-               └────────────┬────────────┘
-                            │
-                            ▼
-                     Ensemble Engine
-               (High-Confidence Voting)
-                            │
-                            ▼
-              Sentiment: POSITIVE / NEGATIVE / NEUTRAL
-         Confidence Score, Metadata (Emojis, Hashtags, Mentions)
-```
+The system processes text, analyzes its sentiment, and generates results to help understand opinions and emotional patterns in textual data.
 
----
+## Key Features
+
+- Text preprocessing and cleaning
+- Automated sentiment analysis
+- Machine learning model training
+- Tweet-based sentiment analysis
+- Command-line interface
+- Application interface
+- Analysis result storage
+- Unit testing
+
+## Project Architecture
+
+The project follows a modular structure, separating preprocessing, model training, sentiment analysis, and application functionality.
+
+| Module | Description |
+|---|---|
+| `preprocessor.py` | Handles text preprocessing |
+| `model_trainer.py` | Manages model training |
+| `analyzer.py` | Performs sentiment analysis |
+| `app.py` | Application entry point |
+| `cli.py` | Command-line interface |
+| `test_analyzer.py` | Tests sentiment analysis functionality |
+
+## Technology Stack
+
+- **Language:** Python
+- **NLP Resources:** NLTK
+- **Machine Learning:** Python-based model training
+- **Data Handling:** CSV
+- **Testing:** Python testing framework
 
 ## Project Structure
 
+```text
+Sentiment-Analysis/
+│
+├── models/                 # Trained model files
+├── nltk_data/              # NLTK resources
+│
+├── analyzer.py             # Sentiment analysis
+├── app.py                  # Application interface
+├── cli.py                  # Command-line interface
+├── model_trainer.py        # Model training
+├── preprocessor.py         # Text preprocessing
+│
+├── test_analyzer.py        # Test cases
+├── sample_tweets.csv       # Sample tweet dataset
+├── results.csv             # Analysis results
+│
+└── README.md
 ```
-Sentiment Analysis/
-├── preprocessor.py        # Tweet text cleaning, contractions, tokenization & SpaCy pipeline
-├── analyzer.py            # Core TwitterSentimentAnalyzer engine (VADER, ML, Ensemble, Batch)
-├── model_trainer.py       # Trains and evaluates 3-class ML model on NLTK twitter dataset
-├── cli.py                 # Rich CLI (single tweet, batch processing, interactive shell)
-├── app.py                 # Streamlit interactive web dashboard
-├── sample_tweets.csv      # 40+ curated benchmark tweets across domains
-├── test_analyzer.py       # Comprehensive pytest unit & integration test suite
-├── nltk_data/             # Local NLTK corpora (vader_lexicon, twitter_samples, etc.)
-└── models/                # Trained model artifacts & evaluation metrics
-    ├── sentiment_pipeline.joblib
-    └── metrics.joblib
+
+## Getting Started
+
+### Prerequisites
+
+- Python 3.x
+- pip
+- Required Python packages and NLTK resources
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone <your-repository-url>
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd Sentiment-Analysis
+   ```
+
+3. Install the dependencies listed in your project's requirements file, if available.
+
+### Running the Project
+
+The project includes separate application and command-line entry points:
+
+```bash
+python app.py
 ```
+
+For command-line execution:
+
+```bash
+python cli.py
+```
+
+*Refer to the implementation for any required command-line arguments or additional configuration.*
+
+## Dataset
+
+The project includes `sample_tweets.csv`, which provides sample tweet data for sentiment analysis.
+
+## Testing
+
+Run the analyzer test module using:
+
+```bash
+python -m pytest test_analyzer.py
+```
+
+## Future Enhancements
+
+- Improve sentiment classification performance.
+- Support larger text datasets.
+- Add interactive sentiment visualization.
+- Extend analysis to customer reviews and social media feedback.
+
+## Author
+
+**Aravindhan A K**
+
+B.Tech – Artificial Intelligence and Data Science
 
 ---
 
-## Quickstart & Usage
-
-### 1. Interactive Web Dashboard
-Run the Streamlit app to explore tweets, batch analyze CSV files, and visualize distributions:
-```bash
-streamlit run app.py
-```
-
-### 2. Command-Line Interface (CLI)
-
-#### Analyze a Single Tweet:
-```bash
-python cli.py --text "Loving the new update! The team did an incredible job. 🚀❤️"
-```
-
-#### Analyze with SpaCy Linguistic Token Breakdown:
-```bash
-python cli.py --text "Worst flight experience ever! @Airlines cancelled with no refund." --spacy
-```
-
-#### Choose Engine (`vader`, `ml`, or `ensemble`):
-```bash
-python cli.py --text "The weather report says 15 degrees in London." --method ensemble
-```
-
-#### Batch Analysis from CSV:
-```bash
-python cli.py --file sample_tweets.csv --output results.csv
-```
-
-#### Interactive Terminal Shell:
-```bash
-python cli.py --interactive
-```
-
----
-
-## Python API Usage
-
-You can easily integrate `TwitterSentimentAnalyzer` into your own Python projects:
-
-```python
-from analyzer import TwitterSentimentAnalyzer
-
-analyzer = TwitterSentimentAnalyzer()
-
-# 1. Single Tweet
-result = analyzer.analyze("Loving this new product! Highly recommend. 😍🔥", method="ensemble")
-print(result["sentiment"])   # 'positive'
-print(result["confidence"])  # 0.95
-print(result["metadata"])    # {'emojis': ['😍', '🔥'], 'word_count': 7, ...}
-
-# 2. Batch Processing
-tweets = [
-    "Great customer service today! 👏",
-    "Flight was delayed 4 hours. Terrible. 😡",
-    "The meeting will begin at 2 PM.",
-]
-df_results = analyzer.analyze_batch(tweets, text_column="tweet", method="vader")
-print(df_results[["tweet", "sentiment", "confidence", "compound_score"]])
-```
-
----
-
-## Machine Learning Model Details
-
-- **Dataset**: Built from NLTK's `twitter_samples` corpus, curated into a balanced 3-class distribution (Positive, Negative, Neutral).
-- **Features**: TF-IDF Vectorizer with unigram + bigram features (`ngram_range=(1, 2)`), sublinear term frequency scaling.
-- **Classifier**: Logistic Regression with balanced class weights and L2 regularization (`C=1.5`).
-- **Test Set Accuracy**: **82.83%**
-- **F1-Scores**:
-  - Neutral: **0.99**
-  - Negative: **0.76**
-  - Positive: **0.74**
-
----
-
-## Running the Automated Tests
-
-Execute the comprehensive unit and integration test suite:
-```bash
-pytest test_analyzer.py -v
-```
-
+<p align="center">
+  <i>Turning textual data into meaningful insights through Natural Language Processing.</i>
+</p>
