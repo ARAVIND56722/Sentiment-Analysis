@@ -1,0 +1,42 @@
+tweet,expected_sentiment,category
+"Loving the new iPhone camera! The low light shots are stunning. 😍📸",positive,tech
+"Fantastic customer support from @Delta today! Quick and courteous resolution. 👏✈️",positive,service
+"Python 3.12 is so fast! Major kudos to the core developer team. #python #coding",positive,tech
+"Just received my promotion at work! Feeling blessed and thrilled. 🎉🥳",positive,personal
+"This concert was hands down the best live music experience of my life! 🎸🔥",positive,entertainment
+"Great meal at the new Italian bistro downtown. Highly recommend the pasta!",positive,food
+"So excited for the weekend trip with friends! Can't wait! 🏖️✨",positive,lifestyle
+"The new electric car has incredible range and acceleration. Super impressed! ⚡🚗",positive,automotive
+"Thank you @Spotify for curating the ultimate workout playlist. Absolute fire!",positive,music
+"Delighted with our quarterly performance. Best growth in company history! 📈",positive,business
+"Beautiful sunny morning for a 5k run in the park! Feeling energized. 🏃‍♂️☀️",positive,fitness
+"Incredible acting and cinematography in the new film. A true masterpiece! 🎬🌟",positive,movies
+"Huge shoutout to the open source community for these amazing tools! ❤️💻",positive,tech
+"Our flight was delayed by 6 hours without any food or water voucher. Unacceptable! 😡",negative,service
+"App keeps crashing every time I open the profile tab. Please fix this bug! 📱❌",negative,tech
+"Worst pizza I have ever tasted. Cold, soggy, and arrived 40 minutes late. 🤮",negative,food
+"Terrible battery life on the new laptop. Drains completely in less than two hours. 👎",negative,hardware
+"Customer care representative was rude and refused to help. Never purchasing again!",negative,service
+"Train was cancelled again with zero notice. Disastrous commute every single day. 🚆😤",negative,transport
+"So disappointed with the series finale. Completely ruined 8 seasons of character growth.",negative,entertainment
+"My package arrived completely shattered. Awful packaging and shipping @DeliveryCo.",negative,e-commerce
+"Lost all my unsaved work because the program suddenly froze. Frustrating! 🤬",negative,software
+"The hotel room was dirty and smelled like smoke. Do not stay here!",negative,travel
+"I hate waking up early on Monday mornings with a migraine. 🤕",negative,personal
+"Horrible Wi-Fi connection at the airport. Unable to attend my meeting. 📶❌",negative,travel
+"The package is scheduled for delivery on Thursday between 2 PM and 5 PM.",neutral,logistics
+"The Python Software Foundation has released version 3.11.4 documentation.",neutral,news
+"Today's high will be 22 degrees Celsius with a slight chance of evening rain.",neutral,weather
+"The board of directors meeting has been rescheduled for next Tuesday at 9 AM.",neutral,corporate
+"Stock markets closed slightly lower ahead of the Federal Reserve policy announcement.",neutral,finance
+"Flight AA104 from New York to London departs from Terminal 8 Gate 12.",neutral,travel
+"The university library will remain closed on national holidays.",neutral,education
+"Researchers published a new study on deep ocean temperature variations.",neutral,science
+"The train will arrive at platform 4 in approximately 5 minutes.",neutral,transit
+"Please submit your quarterly tax forms before the deadline on the 15th.",neutral,administrative
+"The keynote address starts at 10:00 AM in the main auditorium.",neutral,event
+"The recipe calls for 200g of flour, two eggs, and a cup of milk.",neutral,food
+"New update 2.4.1 contains security patches and stability fixes.",neutral,tech
+"The museum exhibition runs from November 1st through January 31st.",neutral,culture
+"Match kickoff is scheduled for 7:30 PM local time on Saturday.",neutral,sports
+

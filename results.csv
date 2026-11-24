@@ -1,0 +1,41 @@
+tweet,expected_sentiment,category,sentiment,confidence,compound_score,hashtags,mentions,emojis
+Loving the new iPhone camera! The low light shots are stunning. 😍📸,positive,tech,positive,0.957,0.9134,,,😍 📸
+Fantastic customer support from @Delta today! Quick and courteous resolution. 👏✈️,positive,service,positive,0.957,0.9134,,@Delta,👏 ✈
+Python 3.12 is so fast! Major kudos to the core developer team. #python #coding,positive,tech,positive,0.797,0.5935,"python, coding",,
+Just received my promotion at work! Feeling blessed and thrilled. 🎉🥳,positive,personal,positive,0.975,0.9508,,,🎉 🥳
+This concert was hands down the best live music experience of my life! 🎸🔥,positive,entertainment,positive,0.953,0.906,,,🎸 🔥
+Great meal at the new Italian bistro downtown. Highly recommend the pasta!,positive,food,positive,0.901,0.8012,,,
+So excited for the weekend trip with friends! Can't wait! 🏖️✨,positive,lifestyle,positive,0.924,0.8487,,,🏖 ✨
+The new electric car has incredible range and acceleration. Super impressed! ⚡🚗,positive,automotive,positive,0.903,0.807,,,⚡ 🚗
+Thank you @Spotify for curating the ultimate workout playlist. Absolute fire!,positive,music,positive,0.55,0.1007,,@Spotify,
+Delighted with our quarterly performance. Best growth in company history! 📈,positive,business,positive,0.943,0.8858,,,📈
+Beautiful sunny morning for a 5k run in the park! Feeling energized. 🏃‍♂️☀️,positive,fitness,positive,0.948,0.8955,,,🏃 ♂ ☀
+Incredible acting and cinematography in the new film. A true masterpiece! 🎬🌟,positive,movies,positive,0.949,0.8977,,,🎬 🌟
+Huge shoutout to the open source community for these amazing tools! ❤️💻,positive,tech,positive,0.945,0.8908,,,❤ 💻
+Our flight was delayed by 6 hours without any food or water voucher. Unacceptable! 😡,negative,service,negative,0.952,-0.9041,,,😡
+App keeps crashing every time I open the profile tab. Please fix this bug! 📱❌,negative,tech,negative,0.922,-0.8439,,,📱 ❌
+"Worst pizza I have ever tasted. Cold, soggy, and arrived 40 minutes late. 🤮",negative,food,negative,0.909,-0.8176,,,🤮
+Terrible battery life on the new laptop. Drains completely in less than two hours. 👎,negative,hardware,negative,0.883,-0.765,,,👎
+Customer care representative was rude and refused to help. Never purchasing again!,negative,service,positive,0.624,0.2481,,,
+Train was cancelled again with zero notice. Disastrous commute every single day. 🚆😤,negative,transport,negative,0.949,-0.8979,,,🚆 😤
+So disappointed with the series finale. Completely ruined 8 seasons of character growth.,negative,entertainment,negative,0.818,-0.6353,,,
+My package arrived completely shattered. Awful packaging and shipping @DeliveryCo.,negative,e-commerce,negative,0.885,-0.7698,,@DeliveryCo,
+Lost all my unsaved work because the program suddenly froze. Frustrating! 🤬,negative,software,negative,0.922,-0.8439,,,🤬
+The hotel room was dirty and smelled like smoke. Do not stay here!,negative,travel,negative,0.588,-0.1759,,,
+I hate waking up early on Monday mornings with a migraine. 🤕,negative,personal,negative,0.964,-0.9287,,,🤕
+Horrible Wi-Fi connection at the airport. Unable to attend my meeting. 📶❌,negative,travel,negative,0.964,-0.9274,,,📶 ❌
+The package is scheduled for delivery on Thursday between 2 PM and 5 PM.,neutral,logistics,neutral,1.0,0.0,,,
+The Python Software Foundation has released version 3.11.4 documentation.,neutral,news,neutral,1.0,0.0,,,
+Today's high will be 22 degrees Celsius with a slight chance of evening rain.,neutral,weather,positive,0.625,0.25,,,
+The board of directors meeting has been rescheduled for next Tuesday at 9 AM.,neutral,corporate,neutral,1.0,0.0,,,
+Stock markets closed slightly lower ahead of the Federal Reserve policy announcement.,neutral,finance,negative,0.614,-0.228,,,
+Flight AA104 from New York to London departs from Terminal 8 Gate 12.,neutral,travel,neutral,1.0,0.0,,,
+The university library will remain closed on national holidays.,neutral,education,positive,0.691,0.3818,,,
+Researchers published a new study on deep ocean temperature variations.,neutral,science,neutral,1.0,0.0,,,
+The train will arrive at platform 4 in approximately 5 minutes.,neutral,transit,neutral,1.0,0.0,,,
+Please submit your quarterly tax forms before the deadline on the 15th.,neutral,administrative,positive,0.659,0.3182,,,
+The keynote address starts at 10:00 AM in the main auditorium.,neutral,event,neutral,1.0,0.0,,,
+"The recipe calls for 200g of flour, two eggs, and a cup of milk.",neutral,food,neutral,1.0,0.0,,,
+New update 2.4.1 contains security patches and stability fixes.,neutral,tech,positive,0.67,0.34,,,
+The museum exhibition runs from November 1st through January 31st.,neutral,culture,neutral,1.0,0.0,,,
+Match kickoff is scheduled for 7:30 PM local time on Saturday.,neutral,sports,neutral,1.0,0.0,,,
